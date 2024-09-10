@@ -16,7 +16,6 @@
 # ###MoveHashtoFront
 
 p = str(input())
-x= p.count('#')
-s = p.replace('#', '')
-print('#'*x+s)
-
+s = p.count('#')
+a = p.replace("#", "")
+print('#'*s+a)

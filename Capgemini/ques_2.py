@@ -13,11 +13,13 @@
 from collections import Counter
 
 n = input()
-def count(n):
+def reduce(n):
+    r=''
     counter = Counter(n)
-    result = ''
-    for key, value in counter.items():
-        result +=f'{key}{value}'
-    return result
+    
+    for key,value in counter.items():
+        
+        r += f"{key}{value}"
+    return r
 
-print(count(n))
+print(reduce(n))
