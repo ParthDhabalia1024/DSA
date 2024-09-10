@@ -42,8 +42,28 @@
 
 
 
-n = int(input())
-arr = list(map(int, input().split()))
+# Function to calculate the total tyres for each dealership
+def calculate_tyres(n, dealerships):
+    # Loop through each dealership and calculate tyres
+    for cars, bikes in dealerships:
+        total_tyres = (cars * 4) + (bikes * 2)
+        print(total_tyres)
 
-# def numberoftyres(n, arr):
+
+
+
+
+
+# Input: number of dealerships
+n = int(input("Enter the number of dealerships: "))
+
+# Input for cars and bikes in each dealership
+dealerships = []
+for i in range(n):
+    # Split the input to get the number of cars and bikes
+    cars, bikes = map(int, input().split())
+    dealerships.append((cars, bikes))
+
+# Calculate and print the number of tyres for each dealership
+calculate_tyres(n, dealerships)
 
