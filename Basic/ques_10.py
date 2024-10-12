@@ -1,19 +1,15 @@
 #Python program to Sort first half in ascending order and second half in descending order in an array
 
 a = [10, 89, 9, 56, 4, 80, 8]
-a.sort()
-n = len(a)
+# n2 = int(input())
+# n3 = int(input())
 
-def sort_ascdesc(a,n):
-    
-    i = 0
-    while i < n/2:
-        print (a[i])
-        i = i+1
-    j = n-1
-    while j > n/2:
-        print(a[j])
-        j -= 1
-
-print(sort_ascdesc(a,n))    
+def sort_asc_desc_element(a):
+   mid = len(a) // 2
+   first_half = sorted(a[:mid])
+   second_half = sorted(a[mid:], reverse=True)
+   
+   return first_half + second_half
+result = sort_asc_desc_element(a)
+print(result)        
 
